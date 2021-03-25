@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="circle">
+        
+</div>
+  <div class="formHolder">
+        <h4>SignUp</h4>
+      <div class="name-container">
+          <mat-form-field class="name" appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input matInput [formControl]="name" required>
+            <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+       
+        <div id="email-container"> 
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div id="password-container">
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your password</mat-label>
+            <input class="Pwd" matInput [type]="hide ? 'password' : 'text'"  [formControl]="password"  required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div id="select-container">
+          <mat-form-field [formControl]="nature" appearance="outline" required>
+            <mat-label>Select</mat-label>
+            <mat-select>
+              <mat-option value="Person">Normal Person</mat-option>
+              <mat-option value="Association">Association</mat-option>
+            </mat-select>
+          </mat-form-field>
+         </div>
+        <!-- Calling SignIn Api from AuthService -->
+        <button mat-raised-button color="#e2bb1d" class="signUpBtn" [disabled]="!email.valid || !password.valid || !name.valid " (click)='authService.SignUp(email.value,password.value,name.value,nature.value)'>SignUp</button>
+
+        <a routerLink="/signin"> Sign In </a>
+      </div>
+</div>

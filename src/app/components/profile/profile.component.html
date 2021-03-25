@@ -1,0 +1,118 @@
+
+<div class="container">
+ 
+    <div class="row" *ngIf="authService.userData as user">
+      <div class="profil-header">
+        <div class="color-box"> </div>
+          <div class="profile-img">
+            <img src="assets/images/dummy-user.png" alt="user-img">          
+          </div>
+          <div class="profile-nav-info">
+              <h3 class="user-name"> <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h3>
+          </div>
+      </div>
+      <div class="main-bd">
+        <div class="left-side">
+          <div class="profile-side">
+            <div class="verified">
+              <i class="material-icons nav__icon"><span class="material-icons-round">
+                verified
+              </span></i>
+          
+            </div>
+          
+            <p class="mobile-no">
+              <i class="material-icons nav__icon"><span class="material-icons-outlined">
+                call
+                </span></i>
+              {{(user.phone) ? user.phone : '+21600000000'}}
+            </p>
+            <p class="user-mail"><i class="material-icons nav__icon"><span class="material-icons-outlined">
+              email
+              </span></i>
+              {{user.email}}
+            </p>
+            <div class="user-bio">
+                <h2>BIO</h2>
+                <p class="bio">We can Change The World if We want To !</p>
+            </div>
+            <div class="profile-btn">
+              <button mat-button class="chatbtn">
+                  <i class="material-icons nav__icon">
+                    <span class="material-icons-round">
+                      comment
+                      </span>
+                    </i>
+              </button>
+              <button  mat-button class="createbtn">
+                create
+              </button>
+            </div>
+            <div class="user-rating">
+                <h3 class="rating">4.5</h3>
+                <div class="rate">
+                    <div class="stars">
+                        <i class="material-icons nav__icon"><span class="material-icons-outlined">
+                          star_rate
+                          </span> </i>
+                          <i class="material-icons nav__icon"><span class="material-icons-outlined">
+                            star_rate
+                            </span> </i>
+                          <i class="material-icons nav__icon"><span class="material-icons-outlined">
+                              star_rate
+                              </span> </i>
+                              <i class="material-icons nav__icon"><span class="material-icons-outlined">
+                                star_rate
+                                </span> </i>
+                                <i class="material-icons nav__icon"><span class="material-icons-outlined">
+                                  star_rate
+                                  </span> </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="nav">
+          
+            <button mat-raised-button class="user-setting">Settings</button>
+            <button  mat-raised-button color="warn" class="user-logout"  (click)="authService.SignOut()">logout</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+
+ 
+ 
+ <!-- 
+    <div class="col-md-12">
+      <div class="media">
+        <img class="profileImage" src="{{(user.photoURL) ? user.photoURL : '../../shared/images/dummy-user.png"
+          alt="{{user.displayName}}">
+        <div class="media-body">
+          <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+          <p>User ID: <strong>{{user.uid}}</strong></p>
+          <p>Email: <strong>{{user.email}}</strong></p>
+          <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+        </div>
+      </div>
+
+      <div class="formGroup">
+        <input type="button" class="btn btnPrimary" value="Logout" (click)="authService.SignOut()">
+      </div>
+    
+-->
+
+
+
+      
+
+      <!--
+         <span class="material-icons-outlined">
+star_rate
+</span>
+-->

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "scapp-e52d2": {
+      "hosting": {
+        "ngApp": [
+          "scapp-e52d2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "GscApp": "scapp-e52d2"
+  }
+}

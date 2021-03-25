@@ -1,0 +1,24 @@
+
+#carouselExampleInterval
+{
+    height: 300px;
+    background-color: black;
+}
+.profile{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-img{
+    width: 150px;
+    height:150px;  
+}
+
+
+.profile-container{
+    display: flex;
+    flex-direction: row;
+}

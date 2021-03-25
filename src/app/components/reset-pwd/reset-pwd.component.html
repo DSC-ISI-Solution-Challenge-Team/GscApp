@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="circle">
+        
+    </div>
+    <div class="authBox">
+        <h4> Reset Your Password </h4>
+        <div class="formGroup">
+            <span>
+                <i class="fas fa-envelope"></i>
+            </span>
+                <div id="email-container"> 
+                    <mat-form-field class="mail" appearance="outline">
+                      <mat-label>Enter your email</mat-label>
+                      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+       
+                </div>
+
+    </div>
+    <button mat-raised-button color="#e2bb1d" class="signInBtn" (click)="authService.resetPwd(email.value)">Send !</button>
+       
+    <a routerLink="/signup"> Create an account ! </a>
+    <a routerLink="/signin"> Sign In </a>
+</div>

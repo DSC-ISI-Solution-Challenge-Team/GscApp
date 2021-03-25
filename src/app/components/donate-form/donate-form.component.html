@@ -1,0 +1,47 @@
+<div class="center-hideform">
+  <button class="close-btn" mat-dialog-close><i class="material-icons nav__icon">
+    cancel
+ </i></button> 
+    <form class="formHolder" action="hné 7ot el action">
+        <h3 class="title">Donation</h3>
+       <div id="field"> 
+                    <mat-form-field class="field" appearance="outline">
+                      <mat-label>Full Name: </mat-label>
+                      <input matInput placeholder="Fullname" [formControl]="fullname" required>
+                    </mat-form-field>
+        </div>
+        
+
+        <div id="field"> 
+                    <mat-form-field class="field" appearance="outline">
+                      <mat-label>Offer: </mat-label>
+                      <input matInput placeholder="Offer" [formControl]="Offer" required>
+                    </mat-form-field>
+        </div>
+
+        <div id="field"> 
+                    <mat-form-field class="field" appearance="outline">
+                      <mat-label>Quantity:  </mat-label>
+                      <input matInput placeholder="Quantity" [formControl]="qte" required>
+                    </mat-form-field>
+        </div>
+        <div id="field"> 
+          <mat-form-field class="field" appearance="outline">
+            <mat-label>Phone: </mat-label>
+            <input matInput placeholder="Phone" [formControl]="phone" required>
+          </mat-form-field>
+        </div>
+
+        <div id="field"> 
+                    <mat-form-field class="field" appearance="outline">
+                      <mat-label>Notes: </mat-label>
+                      <input matInput placeholder="Notes" [formControl]="note" required>
+                    </mat-form-field>
+        </div>
+        
+        <input class="sub" type="submit" value="Submit">
+    </form>
+
+    
+    
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="shareLocation">
+        <div class="description-container">
+            <div class="image">  
+                <img src="assets/images/homeless.jpeg" alt="homeless-image" class="image">
+            </div>
+            <div class="description">
+                <p>Share Location and help people</p>
+            </div>
+        </div>
+        <button  mat-button (click)='location.getLocation()'> shareLocation </button>
+    </div>
+    
+    <div class="donationForm">
+        <div class="description-container">
+            <div class="image">  
+                <img src="assets/images/donation-box-100221101-large.jpg" alt="Donation-image" class="image">
+            </div>
+            <div class="description">
+                <p>Fill The Form And Donate For People Who Needs You ! </p>
+            </div>
+        </div>
+        <button mat-button (click)="openDialog()"> Donate </button>
+    </div>
+</div>
+
