@@ -1,7 +1,12 @@
 
 <router-outlet></router-outlet>
+<div class="row" *ngIf="authService.userData as user">
+    <app-navigation></app-navigation>
+    </div>
 
-<app-navigation></app-navigation>
+
+
+
 
 
 

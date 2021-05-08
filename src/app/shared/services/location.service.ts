@@ -10,7 +10,6 @@ import { AuthServicesService } from './auth-services.service';
 export class LocationService {
   public lat :any;
   public lng : any; 
-  user = this.authService.LoggedIn() ;
  
   constructor(public afs: AngularFirestore,public authService : AuthServicesService) { }
 

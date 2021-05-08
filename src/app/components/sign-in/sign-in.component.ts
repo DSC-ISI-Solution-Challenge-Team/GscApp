@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import {AuthServicesService} from '../../shared/services/auth-services.service';
-const googleLogoURL = 
-"https://raw.githubusercontent.com/fireflysemantics/logo/master/Google.svg";
 
 @Component({
   selector: 'app-sign-in',

@@ -8,66 +8,39 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     padding: 10px;
 }
-#carouselExampleInterval{
-    position: absolute;
-    top: 10px;
-    width: 95%;
-    height: 550px ;
-    
+a{
+    text-decoration: none;
 }
-.move-btn{
-    position: relative; 
-     height: 300px;
-     top: -200px;
- }
-.spinner-holer{
-    position: absolute;
-    height:350px;
-    background: rgba( 255, 255, 255, 0.50 );
+
+.Box{
+    height: 300px ;
+    width: 300px;
+    background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    width: 100%;
-    height: 100%;
+    margin: 20px;
+    padding: 10px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+}
+
+.top-img{
+    position: absolute;
     top: 0px;
-    text-align: center;
-    padding: 10px;
-}
-
-.spinner-margin{
-    position: absolute;
-    top: 25px;
-    left: 43%;
-}
-
-.percent-holder{
-    position: absolute;
-    top: 50px;
-}
-
-.description{
-    text-align: center;
-    text-transform: capitalize;
-    
-    position: absolute;
-    bottom: 20px;
     left: 0px;
-    height: 150px;
-    padding: 15px;
-}
-
-.img{
     width: 100%;
-    height: 350px;
+    height: 400px;
+    z-index: -200;
+    transform: rotate(180deg);
 }
-
 

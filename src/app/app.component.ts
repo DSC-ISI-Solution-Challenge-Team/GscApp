@@ -7,9 +7,9 @@ import { AuthServicesService } from './shared/services/auth-services.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngApp';
-
+  title = 'Donatit';
+ 
   constructor(public authService : AuthServicesService){
-    
   }
+  
 }

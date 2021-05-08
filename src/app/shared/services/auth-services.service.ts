@@ -15,10 +15,11 @@ import { User } from './user';
 
 export class AuthServicesService {
  
-  userData: any ; 
+  userData: any  ; 
   name :string =""; 
   nature  : string ="";
   phone: string ="" ; 
+  bio="" ;
  
 
   constructor(
@@ -87,9 +88,9 @@ export class AuthServicesService {
       emailVerified : user.emailVerified ,
       nature : this.nature,
       phone : this.phone,
-      bio : user.bio
+      bio : this.bio
     }
-    console.log(userData)
+   
     return userRef.set(userData, {
       merge: true
     })
@@ -101,11 +102,9 @@ export class AuthServicesService {
   async SignOut() {
   return this.afAuth.signOut().then(() => {
     localStorage.removeItem('user');
+    this.userData=null
   })
 }
 
-  LoggedIn(){
-    return this.userData  ; 
-  }
- 
+
 }

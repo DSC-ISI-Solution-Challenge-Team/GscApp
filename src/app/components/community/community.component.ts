@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/shared/services/data.service';
-import {MatCardModule} from '@angular/material/card';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { User } from 'src/app/shared/services/user';
 
 @Component({
   selector: 'app-community',
@@ -8,10 +8,17 @@ import {MatCardModule} from '@angular/material/card';
   styleUrls: ['./community.component.css']
 })
 export class CommunityComponent implements OnInit {
-
-  constructor(public data: DataService) { }
+  public Person : any ; 
+  constructor( private afs: AngularFirestore) {  
+    
+  }
 
   ngOnInit(): void {
+       this.afs.collectionGroup('users',ref => ref.where('nature','==','Person').limit(10)).valueChanges().subscribe(user => {
+       this.Person = user 
+      });
   }
+
+
 
 }

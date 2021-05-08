@@ -1,59 +1,30 @@
 <div class="container">
+  <div class="top-section">
+    <img class="top-img" src="../../../assets/images/59-594145_blue-wave-vector-png-sky-blue-wave-png.png" alt="blue">
+</div>
 <div class="research">
-  
 </div> 
+
   <div id="persons-holder" class="user-box">
     <h2>Persons</h2>
-
-  <!-- <div class="users"*ngFor="person of persons">--> 
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"  id="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="2000">
-            <div class="profile-container">
-
-            <div class="profile">
-                <mat-card class="profile-holder">
-                    <mat-card-header>
-                      <mat-card-title>Mohamed ALi</mat-card-title>
-                      <mat-card-subtitle>Person</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="assets/images/dummy-user.png" alt="user Photo" class="profile-img">
-                    
-                    <mat-card-actions>
-                      <button mat-raised-button>LIKE</button>
-                      <button mat-raised-button>Folow</button>
-                    </mat-card-actions>
-                  </mat-card>
-            </div>
-
-            <div class="profile">
-              <mat-card class="profile-holder">
-                  <mat-card-header>
-                    <mat-card-title>Alaa</mat-card-title>
-                    <mat-card-subtitle>Person</mat-card-subtitle>
-                  </mat-card-header>
-                  <img mat-card-image src="assets/images/dummy-user.png" alt="user Photo" class="profile-img">
-                  
-                  <mat-card-actions>
-                    <button mat-raised-button>LIKE</button>
-                    <button mat-raised-button>Folow</button>
-                  </mat-card-actions>
-                </mat-card>
-            </div>
-          </div>
-          </div>
-          
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-   <!-- </div> --> 
+    
+    <div class="users" *ngFor="let Person of Person">
+      <div class="profile">
+          <mat-card class="profile-holder">
+              <mat-card-header>
+                <mat-card-title> {{Person.displayName}}</mat-card-title>
+                <mat-card-subtitle> {{Person.nature}}</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="assets/images/dummy-user.png" alt="user Photo" class="profile-img">
+              
+              <mat-card-actions>
+                <button mat-raised-button>LIKE</button>
+                <button mat-raised-button>Folow</button>
+              </mat-card-actions>
+            </mat-card>
+      </div>      
+    </div>
+  
   </div>
 
   <div id="association-holder" class="user-box">

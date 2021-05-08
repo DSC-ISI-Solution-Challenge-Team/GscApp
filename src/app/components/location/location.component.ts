@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AfterViewInit, ViewChild, ElementRef } from 
 '@angular/core';
-import { LocationService } from 'src/app/shared/services/location.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 @Component({
@@ -10,7 +10,6 @@ import { LocationService } from 'src/app/shared/services/location.service';
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent implements OnInit {
-  
   @ViewChild('mapContainer', {static: false}) 
 
   gmap?: ElementRef;
@@ -20,9 +19,14 @@ export class LocationComponent implements OnInit {
   coordinates = new google.maps.LatLng(this.lat, this.lng);
    
 
-  constructor(public pos : LocationService) { }
+
+  constructor(private afs: AngularFirestore) { }
 
   ngOnInit(): void {
+    this.afs.collectionGroup('location').valueChanges().subscribe(location => {
+
+    });
+
   }
 
 

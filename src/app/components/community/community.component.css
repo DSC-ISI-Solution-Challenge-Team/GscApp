@@ -1,24 +1,18 @@
-
-#carouselExampleInterval
-{
-    height: 300px;
-    background-color: black;
-}
-.profile{
-    width: 50%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.profile-img{
-    width: 150px;
-    height:150px;  
+.top-img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 400px;
+    z-index: -200;
+    transform: rotate(180deg);
 }
 
 
-.profile-container{
+.users{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    height: 400px;
+    width: 100%;
 }

@@ -22,7 +22,8 @@ import {AuthServicesService} from './shared/services/auth-services.service';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ResetPwdComponent } from './components/reset-pwd/reset-pwd.component';
 import { DonateFormComponent } from './components/donate-form/donate-form.component';
-import { LocationComponent } from './components/location/location.component' ; 
+import { LocationComponent } from './components/location/location.component';
+import { MainComponent } from './components/main/main.component' ; 
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { LocationComponent } from './components/location/location.component' ;
     ResetPwdComponent,
     DonateFormComponent,
     LocationComponent,
+    MainComponent,
   ],
   imports: [
     MaterialModule,
